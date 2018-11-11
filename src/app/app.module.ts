@@ -11,8 +11,10 @@ const routes: Route[] = [
   { path: 'page1', component: Page1Component },
   {
     path: 'page2',
-    component: Page2Component,
-    children: [{ path: ':id', component: Page2DetailComponent }]
+    children: [
+      { path: '', component: Page2Component },
+      { path: ':id', component: Page2DetailComponent }
+    ]
   },
   { path: '**', redirectTo: '/page1', pathMatch: 'full' }
 ];
